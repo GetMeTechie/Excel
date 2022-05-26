@@ -1,0 +1,11 @@
+-- Looks up and grabs the last line of data in a specified sheet
+
+=LOOKUP(2,1/(1-ISBLANK('Tracking  Sheet'!B12:'Tracking  Sheet'!B92)),'Tracking  Sheet'!J12:'Tracking  Sheet'!J92)
+
+
+-- Matches a specific cell to a range on a separate sheet and returns the specified cells from that sheet
+
+=IFERROR(INDEX('Report 1'!$B$4:$I$9014,MATCH(Match!B3 & "",'Report 1'!$C$4:$C$9014,0),7),"")
+
+
+--
